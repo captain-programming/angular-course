@@ -6,20 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<!-- Call fun1 on body.onload -->
 <body onload="fun1()">
   <h1>Assignment first day</h1>
+  <ol>
+    <li>Create 3 functions call them fun1, fun2 and fun3</li>
+    <li>Call fun1 on body.onload</li>
+    <li>Call fun2 on window.addEventListener("load")</li>
+    <li>Call fun3 on document.addEventListener("DOMContentLoaded")</li>
+    <li>And findout which of these will be executed first.</li>
+  </ol>
+  <h2>5. Findout which of these will be executed first.</h2>
+  <h3>Ans:-</h3>
+  <ul>
+    <li>The page load first will be execute fun3</li>
+    <li>And then execute fun 1</li>
+    <li>And last execute fun 2</li>
+  </ul>
 </body>
 <script>
   function fun1(){
     alert("function 1st");
   }
 
+  // Call fun2 on window.addEventListener("load")
   window.addEventListener("load", fun2)
 
   function fun2(){
     alert("function 2st");
   }
 
+  // Call fun3 on document.addEventListener("DOMContentLoaded")
   document.addEventListener("DOMContentLoaded", fun3)
   function fun3(){
     alert("function 3st");
